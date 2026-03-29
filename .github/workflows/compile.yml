@@ -1,0 +1,23 @@
+name: Compilar LaTeX
+
+on:
+  push:
+    paths:
+      - '**.tex'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Compilar PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: exemplo.tex
+
+      - name: Commitar PDF gerado
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "PDF compilado automaticamente"
+          file_pattern: "*.pdf"
