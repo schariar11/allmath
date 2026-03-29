@@ -1,129 +1,83 @@
 \documentclass[12pt, a4paper]{article}
-
-% Pacotes
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage[brazil]{babel}
-\usepackage{amsmath, amssymb}
-\usepackage{graphicx}
 \usepackage{geometry}
-\usepackage{hyperref}
-\usepackage{booktabs}
-\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{parskip}
 
-\geometry{margin=2.5cm}
+\geometry{top=2.5cm, bottom=2.5cm, left=3cm, right=3cm}
 
-% Informações do documento
-\title{\textbf{Documento de Exemplo em \LaTeX}}
-\author{My Name \\ \small University Exemple}
-\date{\today}
+\title{\textbf{Matemática Aplicada e Computacional} \\ \large Aplicação Estatística Econômica}
+\date{}
 
 \begin{document}
 
 \maketitle
-\tableofcontents
-\newpage
+\thispagestyle{empty}
 
-% ─────────────────────────────
-\section{Introdução}
+\hrule
+\vspace{0.5cm}
 
-Este é um documento de  criado com \LaTeX. Ele demonstra os recursos
-mais comuns: formatação de texto, equações matemáticas, tabelas e listas.
-
-\LaTeX{} é amplamente utilizado na academia para a produção de artigos,
-dissertações e relatórios técnicos com alta qualidade tipográfica.
-
-% ─────────────────────────────
-\section{Formatação de Texto}
-
-É possível usar \textbf{negrito}, \textit{itálico}, \underline{sublinhado}
-e {\color{blue} texto colorido} de forma simples.
-
-\subsection{Listas}
-
-\textbf{Lista não ordenada:}
-\begin{itemize}
-  \item Primeiro item
-  \item Segundo item
-  \item Terceiro item
+% MAT
+\noindent\textbf{MAT:}
+\begin{itemize}[leftmargin=2.5cm, topsep=2pt, itemsep=2pt]
+    \item Cálculo Diferencial e Integral I \hfill (MAT2453)
+    \item Cálculo Diferencial e Integral II \hfill (MAT2454)
+    \item Cálculo Diferencial e Integral III \hfill (MAT3120)
+    \item Álgebra Linear \hfill (MAT3211)
 \end{itemize}
 
-\textbf{Lista ordenada:}
-\begin{enumerate}
-  \item Primeiro passo
-  \item Segundo passo
-  \item Terceiro passo
-\end{enumerate}
+\vspace{0.4cm}
 
-% ─────────────────────────────
-\section{Matemática}
+% MAC
+\noindent\textbf{MAC:}
+\begin{itemize}[leftmargin=2.5cm, topsep=2pt, itemsep=2pt]
+    \item Introdução a Computação \hfill (MAC0110)
+    \item Princípio de Desenvolvimento de Algoritmos \hfill (MAC0122)
+    \item Otimização Linear \hfill (MAC0315)
+    \item Otimização Não Linear \hfill (MAC0427)
+\end{itemize}
 
-\subsection{Equações em linha}
+\vspace{0.4cm}
 
-A famosa identidade de Euler é $e^{i\pi} + 1 = 0$, e a fórmula quadrática
-é dada por $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$.
+% MAP
+\noindent\textbf{MAP:}
+\begin{itemize}[leftmargin=2.5cm, topsep=2pt, itemsep=2pt]
+    \item Introdução aos Modelos Lineares \hfill (MAP2110)
+    \item Aplicações de Álgebra Linear \hfill (MAP2210)
+    \item Análise Aplicada \hfill (MAP2216)
+    \item Fundamentos de Análise Numérica \hfill (MAP2220)
+    \item Introdução às Equações Diferenciais Ordinárias e Aplicações \hfill (MAP2226)
+    \item Métodos Numéricos de Equações Diferenciais II \hfill (MAP2320)
+\end{itemize}
 
-\subsection{Equações destacadas}
+\vspace{0.4cm}
 
-\begin{equation}
-  \int_{-\infty}^{\infty} e^{-x^2}\, dx = \sqrt{\pi}
-\end{equation}
+% MAE
+\noindent\textbf{MAE:}
+\begin{itemize}[leftmargin=2.5cm, topsep=2pt, itemsep=2pt]
+    \item Introdução a Probabilidade e Estatística I \hfill (MAE0121)
+    \item Introdução a Probabilidade e Estatística II \hfill (MAE0212)
+    \item Noções de Probabilidade e Processos Estocásticos \hfill (MAE0228)
+    \item Inferência Estatística Frequentista \hfill (MAE0301)
+    \item Inferência Bayesiana \hfill (MAE0302)
+\end{itemize}
 
-\begin{equation}
-  \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}
-\end{equation}
+\vspace{0.4cm}
 
-\subsection{Sistema de equações}
+% EAE
+\noindent\textbf{EAE:}
+\begin{itemize}[leftmargin=2.5cm, topsep=2pt, itemsep=2pt]
+    \item Econometria I \hfill (EAE1221)
+    \item Econometria II \hfill (EAE1222)
+    \item Econometria III \hfill (EAE1223)
+    \item Macroeconomia I \hfill (EAE1211)
+    \item Macroeconomia II \hfill (EAE1212)
+\end{itemize}
 
-\begin{align}
-  \nabla \cdot \mathbf{E}  &= \frac{\rho}{\varepsilon_0} \\
-  \nabla \cdot \mathbf{B}  &= 0 \\
-  \nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
-  \nabla \times \mathbf{B} &= \mu_0\mathbf{J} + \mu_0\varepsilon_0
-                               \frac{\partial \mathbf{E}}{\partial t}
-\end{align}
-
-% ─────────────────────────────
-\section{Tabelas}
-
-\begin{table}[h]
-  \centering
-  \caption{Comparação de linguagens de marcação}
-  \begin{tabular}{lccc}
-    \toprule
-    \textbf{Linguagem} & \textbf{Qualidade} & \textbf{Facilidade} & \textbf{Matemática} \\
-    \midrule
-    \LaTeX  & Excelente & Moderada  & Excelente \\
-    Word    & Boa       & Alta      & Limitada  \\
-    Markdown & Boa      & Alta      & Básica    \\
-    HTML    & Variável  & Moderada  & Com plugin \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-% ─────────────────────────────
-\section{Blocos especiais}
-
-\subsection{Citação}
-
-\begin{quote}
-  ``A matemática é a linguagem com a qual Deus escreveu o universo.''
-  \hfill --- Galileu Galilei
-\end{quote}
-
-\subsection{Código}
-
-\begin{verbatim}
-  def fibonacci(n):
-      if n <= 1:
-          return n
-      return fibonacci(n-1) + fibonacci(n-2)
-\end{verbatim}
-
-% ─────────────────────────────
-\section{Conclusão}
-
-Este documento apresentou os principais recursos do \LaTeX. Para compilar,
-use \texttt{pdflatex exemplo.tex} ou um editor como \textbf{Overleaf},
-\textbf{TeXstudio} ou \textbf{VS Code} com a extensão LaTeX Workshop.
+\vspace{0.5cm}
+\hrule
 
 \end{document}
