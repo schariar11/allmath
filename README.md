@@ -1,2 +1,2 @@
 # allmath
-Euler Project in FreeCodeCamp and discipline of Bachelor's degree in mathematics
+Disciplines of Bachelor's Degree in Mathematics and Solving Euler Project in FreeCodeCamp
